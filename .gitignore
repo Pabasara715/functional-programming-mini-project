@@ -1,0 +1,16 @@
+# Haskell compiled files
+*.hi
+*.o
+cache-simulator
+Main
+
+# Editor files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.iml
