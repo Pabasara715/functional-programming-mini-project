@@ -3,7 +3,7 @@
 ## Group Members
 - EG/2020/3935: Galpayage G. D. T. G
 - EG/2020/4252: Vihanga V. M. B. P
-- EG/2020/4030: Kuanayaka H.P
+- EG/2020/4030: Kumanayake H.P
 - EG/2020/4247: Udayanthika K.D.S.
 
 **Project Title:** A Pure, Concurrent Data Cache Simulator
@@ -49,9 +49,8 @@ This project simulates an in-memory cache system (similar to Redis/Memcached) us
 
 #### Method 1: Using GHCi (Recommended)
 ```bash
-cd cache-simulator
 ghci Main.hs
-*Main> main
+main
 ```
 
 #### Method 2: Compile and Run
