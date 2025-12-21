@@ -47,7 +47,7 @@ findLRUKey cache
 findFIFOKey :: Map CacheKey CacheEntry -> Maybe CacheKey
 findFIFOKey cache
     | Map.null cache = Nothing
-    | otherwise = Just $ fst $ minimumBy (comparing (lastAccessed . snd)) (Map.toList cache)
+    | otherwise = Just $ fst $ minimumBy (comparing (insertedAt . snd)) (Map.toList cache)
 
 -- | Check if cache is full
 isFull :: CacheState -> Bool

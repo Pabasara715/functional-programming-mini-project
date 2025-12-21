@@ -36,8 +36,13 @@ insertCache key val cache
     | not (isValidKey key) = (Error "Invalid key", cache)
     | not (isValidValue val) = (Error "Invalid value", cache)
     | otherwise = 
-        let newEntry = CacheEntry { value = val, lastAccessed = currentTime cache }
-            cache' = incrementTime cache
+        let cache' = incrementTime cache
+            now    = currentTime cache'
+            newEntry = CacheEntry
+                { value = val
+                , insertedAt = now
+                , lastAccessed = now
+                }
         in if Map.member key (entries cache')
            then -- Key exists, update it
                let updatedEntries = Map.insert key newEntry (entries cache')

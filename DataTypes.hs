@@ -23,6 +23,7 @@ type Timestamp = Int
 data CacheEntry = CacheEntry
     { value :: CacheValue
     , lastAccessed :: Timestamp
+    ,insertedAt :: Timestamp
     } deriving (Show, Eq, Generic)
 
 -- | Cache eviction policy (Algebraic Data Type)
